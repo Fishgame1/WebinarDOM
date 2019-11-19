@@ -6,7 +6,7 @@ class MainPage:
         self.driver = driver
 
     def careers(self):
-        self.driver.find_element_by_css_selector('#menu-item-596 > a').click()
+        self.driver.find_element_by_css_selector('#menu-item-5279 > a').click()
         from Engine.careers import Careers
         return Careers(self.driver)
 

@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  jenkins:
+    shm_size: '256m'
+    build: .
+    tty: true
+    volumes:
+      - ".:/WebinarDOM"
