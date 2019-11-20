@@ -9,4 +9,3 @@ class MainPage:
         self.driver.find_element_by_css_selector('#menu-item-5279 > a').click()
         from Engine.careers import Careers
         return Careers(self.driver)
-

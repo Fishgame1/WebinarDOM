@@ -1,0 +1,23 @@
+docker-compose build
+docker-compose up -d
+docker-compose down
+docker ps
+python3 --version
+docker exec -it webinardom_jenkins_1 /bin/sh -c "[ -e /bin/bash ] && /bin/bash || /bin/sh"
+python --version
+python -m pytest Tests/webinar_docker.py
+exit
+
+
+docker build -t webinar_dom .
+docker_id=$(docker run -itd --shm-size=256m --name webinar_docker webinar_dom)
+docker exec -i $docker_id sh -c "python -m pytest --html=webinar_docker.html --self-contained-html Tests/webinar_docker.py"
+docker stop $docker_id
+docker rm $docker_id
+
+
+
+sudo service jenkins start
+sudo service jenkins status
+sudo service jenkins stop
+

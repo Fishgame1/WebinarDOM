@@ -11,10 +11,7 @@ cwd = Path(__file__).parents[1]
 
 class OpenLeocode:
     def __init__(self):
-        from selenium.webdriver.chrome.options import Options
-        chrome_options = Options()
-        self.driver = webdriver.Chrome(chrome_options=chrome_options,
-                                       executable_path=os.path.join(str(cwd), 'chromedriver'))
+        self.driver = webdriver.Chrome(executable_path=os.path.join(str(cwd), 'chromedriver'))
         time.sleep(1)
         self.driver.maximize_window()
 

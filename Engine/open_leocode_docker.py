@@ -11,7 +11,7 @@ class OpenLeocodeDocker:
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument("--disable-setuid-sandbox")
         chrome_options.add_argument("--window-size={},{}".format(1800, 600))
-        self.driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='/WebinarDOM/chromedriver')
+        self.driver = webdriver. Chrome(chrome_options=chrome_options, executable_path='/WebinarDOM/chromedriver')
 
     def __enter__(self):
         self.driver.get('https://leocode.com/')
